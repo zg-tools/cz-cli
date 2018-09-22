@@ -75,7 +75,7 @@ function init (sh, repoPath, adapterNpmName, {
 
   // Check for previously installed adapters
   if (adapterConfig && adapterConfig.path && adapterConfig.path.length > 0 && !force) {
-    throw new Error('A previous adapter is already configured. Use --force to override');
+    throw new Error(`A previous adapter is already configured at '${adapterConfig.path}'. Use --force to override`);
   }
 
   try {
